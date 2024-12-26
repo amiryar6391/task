@@ -1,0 +1,145 @@
+{
+  "columns": [
+    {
+      "field": "productcode",
+      "headerName": "کد کالا",
+      "width": 80,
+      "headerClassName": "super-app-theme--header",
+      "id": "060a"
+    },
+    {
+      "field": "namefood",
+      "headerName": "نام غذا",
+      "width": 100,
+      "headerClassName": "super-app-theme--header",
+      "id": "2ede"
+    },
+    {
+      "field": "imagefood",
+      "headerName": "تصویر غذا",
+      "width": 100,
+      "headerClassName": "super-app-theme--header",
+      "id": "8961"
+    },
+    {
+      "field": "restaurant",
+      "headerName": "رستوران",
+      "width": 150,
+      "headerClassName": "super-app-theme--header",
+      "id": "9b71"
+    },
+    {
+      "field": "ingredients",
+      "headerName": "مواد",
+      "width": 200,
+      "headerClassName": "super-app-theme--header",
+      "id": "f728"
+    },
+    {
+      "field": "price",
+      "headerName": "قیمت",
+      "width": 100,
+      "headerClassName": "super-app-theme--header",
+      "id": "aa4e"
+    },
+    {
+      "field": "action",
+      "headerName": "ویرایش",
+      "width": 150,
+      "headerClassName": "super-app-theme--header",
+      "id": "2219"
+    }
+  ],
+  "rows": [
+    {
+      "id": "1",
+      "productcode": "S232",
+      "namefood": "کباب",
+      "imagefood": "/image/kebab.JPG.webp",
+      "restaurant": "شهرزاد",
+      "ingredients": "گوشت بره",
+      "price": "120000"
+    },
+    {
+      "id": "2",
+      "productcode": "S456",
+      "namefood": "مرغ مجلسی",
+      "imagefood": "/image/kebab.JPG.webp",
+      "restaurant": "یلدا",
+      "ingredients": "مرغ سبز و ادویه",
+      "price": "180000"
+    },
+    {
+      "id": "3",
+      "productcode": "A453",
+      "namefood": "شاورما",
+      "imagefood": "/image/rice.jpg.jpg",
+      "restaurant": "بندری",
+      "ingredients": "مرغ و سس سیر",
+      "price": "100000"
+    },
+    {
+      "id": "4",
+      "productcode": "S332",
+      "namefood": "قورمه سبزی",
+      "imagefood": "/image/kebab.JPG.webp",
+      "restaurant": "یلدا",
+      "ingredients": "سبزی تازه",
+      "price": "200000"
+    },
+    {
+      "id": "6",
+      "productcode": "F889",
+      "namefood": "بندری",
+      "imagefood": "/image/kebab.JPG.webp",
+      "restaurant": "ژان",
+      "ingredients": "سوسیس",
+      "price": "120000"
+    },
+    {
+      "id": "7",
+      "productcode": "F676",
+      "namefood": "برگر",
+      "imagefood": "/image/rice.jpg.jpg",
+      "restaurant": "ژوان",
+      "ingredients": "گوشت گوساله",
+      "price": "200000"
+    },
+    {
+      "id": "8",
+      "productcode": "F543",
+      "namefood": "الویه",
+      "imagefood": "/image/kebab.JPG.webp",
+      "restaurant": "مادر",
+      "ingredients": "سیب زمینی و تخم مرغ",
+      "price": "80000"
+    },
+    {
+      "id": "9",
+      "productcode": "S999",
+      "namefood": "بریونی",
+      "imagefood": "/image/rice.jpg.jpg",
+      "restaurant": "اعظم",
+      "ingredients": "گوشت گردن",
+      "price": "300000"
+    },
+    {
+      "id": "10",
+      "productcode": "S112",
+      "namefood": "جوجه کباب",
+      "imagefood": "/image/kebab.JPG.webp",
+      "restaurant": "شهرزاد",
+      "ingredients": "مرغ تازه",
+      "price": "95000"
+    },
+    {
+      "id": "f01d",
+      "productcode": "F123",
+      "namefood": "پیتزا",
+      "imagefood": "/image/rice.jpg.jpg",
+      "restaurant": "ژان",
+      "ingredients": "مرغ و قارچ",
+      "price": "250000"
+    }
+  ]
+}

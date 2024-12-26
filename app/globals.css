@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+      font-family: 'iransansR';
+      src: url('../public/font/IRANSansX-Regular.woff');
+    }
+  }
+
+  @layer base {
+    html {
+      font-family: "iransansR", system-ui, sans-serif;
+    }
+  }

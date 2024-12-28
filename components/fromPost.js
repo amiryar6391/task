@@ -9,9 +9,7 @@
 import {
   getCityFrom,
   getCountryFrom,
-  getCountryTo,
   getProvinceFrom,
-  getProvinceTo,
 } from "@/redux/slices/status";
 import { getCountriesTo, getProvincesTo } from "@/redux/slices/to";
 import { useRef } from "react";

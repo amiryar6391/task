@@ -1,4 +1,4 @@
-import { getCountryTo, getProvinceTo } from "@/redux/slices/status";
+import { getCountryTo} from "@/redux/slices/status";
 import { getCitiesTo, getProvincesTo } from "@/redux/slices/to";
 import { useEffect } from "react";
 import { useRef } from "react";

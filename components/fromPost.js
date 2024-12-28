@@ -4,7 +4,6 @@
   
   import {
   getCitiesFrom,
-  getCountriesFrom,
   getProvincesFrom,
 } from "@/redux/slices/from";
 import {
@@ -128,6 +127,7 @@ export default function FromPost({ data }) {
 
 
   return (
+
     <form ref={formRef} onReset={() => console.log('form reset')} className=" w-full">
     <fieldset className=" border border-gray-300 rounded-md shadow-xl p-4">
       <legend className=" font-extrabold">از : </legend>

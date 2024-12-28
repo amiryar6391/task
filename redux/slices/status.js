@@ -21,6 +21,7 @@ export const statusSlice = createSlice({
             state.provinceFrom = action.payload
         },
         getCityFrom : ( state , action ) => {
+            
             state.cityFrom = action.payload
         },
         getCountryTo : ( state , action ) => {

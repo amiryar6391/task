@@ -10,8 +10,9 @@ import {
   getCityFrom,
   getCountryFrom,
   getProvinceFrom,
+  getProvinceTo,
 } from "@/redux/slices/status";
-import { getCountriesTo, getProvincesTo } from "@/redux/slices/to";
+import { getCitiesTo, getCountriesTo, getProvincesTo } from "@/redux/slices/to";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -26,6 +27,8 @@ export default function FromPost({ data }) {
   const dispatch = useDispatch();
 
   const formRef = useRef(null)
+  const cityRef = useRef(null)
+  const provinceRef = useRef(null)
 
   useEffect(() => {
     if (formRef.current) {
@@ -41,6 +44,10 @@ export default function FromPost({ data }) {
   const handleCountryFrom = (e) => {
     const selectCountry = e.target.value;
     dispatch(getCountryFrom(selectCountry));
+    if( provinceRef.current && cityRef.current){
+      provinceRef.current.value = ""
+      cityRef.current.value = ""
+    }
     
     const provincesFrom = data.filter(
       (item) =>
@@ -65,6 +72,9 @@ export default function FromPost({ data }) {
   const handleProvinceFrom = (e) => {
     const selectProvince = e.target.value;
     dispatch(getProvinceFrom(selectProvince));
+    if(cityRef.current){
+      cityRef.current.value = ""
+    }
     if(zone == "primary"){
       const citiesFromPrimary = data.filter(item => item.name === "primary" && item.from_city.parent_city.name === selectProvince)
       const uniqueCitiesFromPrimary = [... new Set(citiesFromPrimary.map(item => item.from_city.name))]
@@ -153,6 +163,7 @@ export default function FromPost({ data }) {
           className=" mr-1 border border-black ml-10 rounded-lg w-52"
           onChange={handleProvinceFrom}
           defaultValue={""}
+          ref={provinceRef}
         >
           <option value="" disabled hidden>
             انتخاب{" "}
@@ -168,6 +179,8 @@ export default function FromPost({ data }) {
           className=" mr-1 border border-black ml-10 rounded-lg w-40"
           onChange={handleCityFrom}
           defaultValue={""}
+          ref={cityRef}
+
         >
           <option value="" disabled hidden>
             انتخاب{" "}

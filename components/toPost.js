@@ -11,9 +11,14 @@ export default function ToPost({ data }) {
   const { countriesTo, provincesTo, citiesTo } = useSelector(
     (store) => store.toReducer
   );
+
+  
   const dispatch = useDispatch();
 
   const formRef = useRef(null)
+  const provinceRef = useRef(null)
+  const cityRef = useRef(null)
+  const countryRef = useRef(null)
 
   
  useEffect(() => {
@@ -22,6 +27,14 @@ export default function ToPost({ data }) {
       dispatch(getCountryTo(null));
     }
   }, [zone]);
+
+  useEffect(() => {
+    if (cityFrom) {
+      if (provinceRef.current) provinceRef.current.value = "";
+      if (cityRef.current) cityRef.current.value = "";
+      if (countryRef.current) countryRef.current.value = ""
+    }
+  }, [cityFrom , provinceFrom , countryFrom]);
 
   
 
@@ -50,12 +63,17 @@ export default function ToPost({ data }) {
       dispatch(getProvincesTo(uniqueProvinceTo));
 
     }
+
+   
+
    
   
 
   const handleProvinceTo = (e) => {
     const selectProvinceTo = e.target.value;
-
+    if(cityRef.current){
+      cityRef.current.value = ""
+    }
     if(zone == "primary"){
       const citiesToPrimary = data.filter(item => item.name === zone && (item.to_city.parent_city?.name
         ? item.to_city.parent_city?.name === selectProvinceTo
@@ -95,6 +113,7 @@ export default function ToPost({ data }) {
             className=" mr-1 ml-10 border border-black rounded-lg w-40"
             onChange={handleCountryTo}
             defaultValue={""}
+            ref={countryRef}
           >
             <option value="" disabled hidden>
               انتخاب{" "}
@@ -111,6 +130,7 @@ export default function ToPost({ data }) {
           className=" mr-1 ml-10 border border-black rounded-lg w-52"
           onChange={handleProvinceTo}
           defaultValue={""}
+          ref={provinceRef}
         >
           <option value="" disabled hidden>
             انتخاب{" "}
@@ -125,6 +145,7 @@ export default function ToPost({ data }) {
         <select
           className=" mr-1 ml-10 border border-black rounded-lg w-40"
           defaultValue={""}
+          ref={cityRef}
         >
           <option value="" disabled hidden>
             انتخاب{" "}

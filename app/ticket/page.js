@@ -10,6 +10,9 @@ export default function Ticket(){
     const [ticketInfo , setTicketInfo] = useState([])
     const [parent , setParent] = useState([])
     const [path, setPath] = useState([]);
+    const [currentChange , setCurrentChange] = useState(null)
+    const [isSelectedId , setIsSelectedId] = useState(null);
+    const [changeStatus , setChangeStatus] =useState(true)
     
 
     const getTicketInfo = async() =>{
@@ -68,11 +71,24 @@ export default function Ticket(){
     
 
   const handleChildClick = (item) => {
-    setPath([...path, item]); 
+    setIsSelectedId(item.id);
+    setCurrentChange(item)
+  };
+  const handleNext = () => {
+      setPath([...path, currentChange]);
+      setCurrentChange(null);
+      if( currentChange?.child.length == 0 ){
+      setChangeStatus(false)
+    }
+      
+    
+    
+   
   };
 
   const handleBack = () => {
     setPath(path.slice(0, -1)); 
+    setChangeStatus(true)
   };
 
 
@@ -93,25 +109,47 @@ export default function Ticket(){
         
         {!currentParent &&
           parent.map((item) => (
-            <button
+            <div
               key={item.id}
               onClick={() => handleChildClick(item)}
-              className="block w-full text-left px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded"
+              className={isSelectedId === item.id ? "block w-full text-left px-4 py-2 bg-green-300  rounded cursor-default" : "block w-full text-left px-4 py-2 bg-gray-200 rounded cursor-default"}
             >
               {item.name}
-            </button>
+            </div>
           ))}
 
         {currentParent &&
           currentParent.child?.map((item) => (
-            <button
+            <div
               key={item.id}
               onClick={() => handleChildClick(item)}
               className="block w-full text-left px-4 py-2 bg-blue-200 hover:bg-blue-300 rounded"
             >
               {item.name}
-            </button>
+            </div>
           ))}
+          
+            
+             {
+              changeStatus ?
+              <button
+              onClick={handleNext}
+              
+              className="block w-full text-left px-4 py-2 bg-green-200 hover:bg-green-300 rounded"
+            >
+              بعدی
+            </button>
+            :
+            <button
+            onClick={handleNext}
+            className="block w-full text-left px-4 py-2 bg-green-200 hover:bg-green-300 rounded"
+          >
+            قبلی
+          </button> 
+             }
+            
+          
+
       </div>
     </div>
 

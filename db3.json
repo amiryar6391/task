@@ -1,0 +1,65 @@
+{
+    "data_ticket" :
+    [
+        {
+            "id": 1,
+            "parent": null,
+            "created_at": "2025-01-11T14:30:00+03:30",
+            "updated_at": "2025-01-11T14:30:00+03:30",
+            "soft_delete": false,
+            "name": "مشکلات فنی",
+            "description": "هر مشکلی در اپ دارید",
+            "shop": 43
+          },
+          {
+            "id": 2,
+            "parent": null,
+            "created_at": "2025-01-11T14:30:00+03:30",
+            "updated_at": "2025-01-11T14:30:00+03:30",
+            "soft_delete": false,
+            "name": "مشکلات محصولات",
+            "description": "هر مشکلی در اپ دارید",
+            "shop": 43
+          },
+          {
+            "id": 3,
+            "parent": 1,
+            "created_at": "2025-01-11T14:30:00+03:30",
+            "updated_at": "2025-01-11T14:30:00+03:30",
+            "soft_delete": false,
+            "name": "ثبت نام",
+            "description": "مشکل در ارسال پیامک؟ چک کردن بلک لیست",
+            "shop": 43
+          },
+          {
+            "id": 4,
+            "parent": 1,
+            "created_at": "2025-01-11T14:30:00+03:30",
+            "updated_at": "2025-01-11T14:30:00+03:30",
+            "soft_delete": false,
+            "name": "مشکل در ثبت سفارش",
+            "description": "اینترنت خود را بررسی کنید",
+            "shop": 43
+          },
+          {
+            "id": 5,
+            "parent": 2,
+            "created_at": "2025-01-11T14:30:00+03:30",
+            "updated_at": "2025-01-11T14:30:00+03:30",
+            "soft_delete": false,
+            "name": "سفارش اشتباه ارسال شد",
+            "description": "سفارش را درست ثبت کردیم",
+            "shop": 43
+          },
+          {
+            "id": 6,
+            "parent": 3,
+            "created_at": "2025-01-11T14:30:00+03:30",
+            "updated_at": "2025-01-11T14:30:00+03:30",
+            "soft_delete": false,
+            "name": "سفارش ناقص بود",
+            "description": "ظرف غذا شکسته بود",
+            "shop": 43
+          }
+    ]
+}

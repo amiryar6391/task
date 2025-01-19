@@ -68,3 +68,49 @@ export default function DataGridFood({ columns, rows }) {
   );
 }
 
+
+// import React from 'react';
+// import Child from './Child';
+
+// const Parent = () => {
+//   let childHandleClick;
+
+//   return (
+//     <div>
+//       <h1>کامپوننت والد</h1>
+//       {/* ارسال setter به فرزند */}
+//       <Child setHandleClick={(fn) => (childHandleClick = fn)} />
+//       {/* دکمه در والد، اما از تابع تعریف‌شده در فرزند استفاده می‌کند */}
+//       <button onClick={() => childHandleClick()}>کلیک کن</button>
+//     </div>
+//   );
+// };
+
+// export default Parent;
+
+
+
+
+
+// import React, { useEffect } from 'react';
+
+// const Child = ({ setHandleClick }) => {
+//   // تعریف تابع در فرزند
+//   const handleClick = () => {
+//     console.log('عملیات در کامپوننت فرزند انجام شد!');
+//   };
+
+//   // ارسال تابع به والد
+//   useEffect(() => {
+//     setHandleClick(handleClick);
+//   }, [setHandleClick]);
+
+//   return (
+//     <div>
+//       <h2>کامپوننت فرزند</h2>
+//     </div>
+//   );
+// };
+
+// export default Child;
+

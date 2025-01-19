@@ -10,7 +10,6 @@
     "start-api": "json-server --watch db.json --port 9000",
     "start-api2": "json-server --watch db2.json --port 8000",
     "start-api3": "json-server --watch db3.json --port 7000"
-
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -21,6 +20,7 @@
     "@mui/x-data-grid-generator": "^7.23.2",
     "@mui/x-data-grid-pro": "^7.23.2",
     "@reduxjs/toolkit": "^2.5.0",
+    "firebase": "^11.2.0",
     "json-server": "^1.0.0-beta.3",
     "next": "15.1.1",
     "react": "^19.0.0",

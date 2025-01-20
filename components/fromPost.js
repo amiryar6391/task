@@ -12,7 +12,7 @@ import {
   getProvinceFrom,
   getProvinceTo,
 } from "@/redux/slices/status";
-import { getCitiesTo, getCountriesTo, getProvincesTo } from "@/redux/slices/to";
+import { getCountriesTo, getProvincesTo } from "@/redux/slices/to";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";

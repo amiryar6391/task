@@ -22,12 +22,10 @@ export const fromSlice = createSlice({
     reducers : {
         getCountriesFrom : ( state , action) => {
          
-         
         state.countriesFromSlice = action.payload
             
         },
         getProvincesFrom : ( state , action) => {
-        
             
             state.provincesFromSlice = action.payload
         },
@@ -38,7 +36,6 @@ export const fromSlice = createSlice({
     },
     extraReducers : (builder) => {
         builder.addCase ( fetchPostZone.fulfilled , (state , action) => {
-            
             state.data = action.payload
             state.loading = false
         })
